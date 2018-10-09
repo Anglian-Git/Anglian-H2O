@@ -1,0 +1,9 @@
+export class SupplyModel {
+     id: number;
+    eventTitle: number;
+    eventDate: string;
+    assignTo: number;
+    Locations: SupplyLocation[];
+    locationId: string;
+    isCompleted: boolean
+} 
