@@ -1,9 +1,10 @@
 import { Injectable } from "@angular/core";
-
+import { Map } from "./map/map";
 @Injectable({
   providedIn: "root"
 })
 export class EventService {
+  MapUrl = "/api/map";
   constructor() {}
 
   getEvents() {
@@ -13,6 +14,9 @@ export class EventService {
   getEventItem(id: number) {
     return EVENTS.find(event => event.id === id);
   }
+  /*getSupplyLocations(id: number) {
+    return SupplyLocations.find(event => event.id === id);
+  }*/
 }
 const EVENTS = [
   {
@@ -28,3 +32,34 @@ const EVENTS = [
     time: "08:00"
   }
 ];
+/*
+const SupplyLocation = [
+  {
+    id: 20000001,
+    locationid: 101,
+    plot_no: 203,
+    street: "",
+    City: "",
+    Country: "",
+    Pin_code: ""
+  },
+  {
+    id: 20000001,
+    locationid: 102,
+    plot_no: 202,
+    street: "",
+    City: "",
+    Country: "",
+    Pin_code: ""
+  },
+  {
+    id: 20000001,
+    locationid: 103,
+    plot_no: 221,
+    street: "",
+    City: "",
+    Country: "",
+    Pin_code: ""
+  }
+];
+*/
