@@ -8,9 +8,9 @@ import { MapComponent } from "../map/map.component";
 
 export const appRoutes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
-  { path: "home", component: HomeComponent }
+  { path: "home", component: HomeComponent },
+  { path: "eventitem", component: EventItemComponent }
   /*,
-  { path: "", component: EventItemComponent },
   { path: "", component: EventDetailComponent },
   { path: "map", component: MapComponent }*/
 ];
