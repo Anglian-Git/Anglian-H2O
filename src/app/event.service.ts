@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { Map } from "./map/map";
+import { Injectable } from '@angular/core';
+
 @Injectable({
   providedIn: "root"
 })
