@@ -1,19 +1,23 @@
 <div class=" d-flex container justify-content-center align-items-center w-100 h-100 ">
   <div class="  d-flex flex-column col-8    shadow mb-5  border ">
     <div *ngFor="let event of events">
+
       <div class="flex-row p-3  border-bottom">
         <div class=" small text-muted text-md-left">{{event.id}}</div>
         <div class="d-flex flex-row ">
           <div class="flex-column col-11 text-grey font-weight-bold mb-2 text-md-left" style="font-size: 20px">{{event.name}}</div>
           <div class=" col-1 text-right flex-column">
-            <i [routerLink]="['/eventitem']" class=" fa fa-chevron-circle-right" style="color:grey; font-size: 35px"></i>
+            <i [routerLink]="['/map', event.id]" class=" fa fa-chevron-circle-right" style="color:grey; font-size: 35px"></i>
 
-            <!--  <app-event-item (click)="getEventItem(event.id)" [event]
+            <!-- (click)="getSupplyLocations(event.id)"
+              [routerLink]="['/event-detail', event.id]"
+              <app-event-item (click)="getEventItem(event.id)" [event]
      ="event"></app-event-item> -->
           </div>
         </div>
         <div class=" text-muted small text-md-left"> Reported on: {{event.date}} {{event.time}}</div>
       </div>
+      <!-- <app-event-detail (click)="getEventItem(event.id)" [event]="event"></app-event-detail> -->
     </div>
   </div>
 </div>

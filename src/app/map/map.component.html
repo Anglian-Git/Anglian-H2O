@@ -1,3 +1,18 @@
-<p *ngFor="let hero of heroes">
-  {{Map.id}} - {{Map.Locationid}}
-</p>
+<agm-map [latitude]="event.lat" [longitude]="event.lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false"
+  (mapClick)="mapClicked($event)">
+
+
+  <agm-marker *ngFor="let location of event.SupplyLocations; let i = index" [latitude]="location.lat" [longitude]="location.lng"
+    [label]="location.label">
+
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+
+  </agm-marker>
+
+  <!-- <agm-circle [latitude]="event.lat" [longitude]="event.lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true"
+    [editable]="true">
+  </agm-circle> -->
+
+</agm-map>
