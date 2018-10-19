@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { EventService } from "../event.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-event-item",
@@ -6,9 +8,9 @@ import { Component, Input, OnInit } from "@angular/core";
   styleUrls: ["./event-item.component.css"]
 })
 export class EventItemComponent {
+  SubLocation: any;
   @Input()
   event: any;
-  constructor() {}
-
+  constructor(private eventService: EventService, private router: Router) {}
   ngOnInit() {}
 }
