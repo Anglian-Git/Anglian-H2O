@@ -1,15 +1,15 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule, Routes } from "@angular/router";
-import { EventItemComponent } from "../event-item/event-item.component";
 import { EventDetailComponent } from "../event-detail/event-detail.component";
 import { HomeComponent } from "../home/home.component";
 import { MapComponent } from "../map/map.component";
+import { SidebarnavComponent } from "../sidebarnav/sidebarnav.component";
 
 export const appRoutes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
-  { path: "eventitem", component: EventItemComponent },
+  { path: "sidenav", component: SidebarnavComponent },
   { path: "event-detail/:id", component: EventDetailComponent },
   { path: "backtohome", component: HomeComponent },
   { path: "map/:id", component: MapComponent }

@@ -7,16 +7,7 @@
         <div class="d-flex flex-row ">
           <div class="flex-column col-11 text-grey font-weight-bold mb-2 text-md-left" style="font-size: 20px">{{event.name}}</div>
           <div class=" col-1 text-right flex-column">
-<<<<<<< HEAD
             <i [routerLink]="['/event-detail', event.id]" class=" fa fa-chevron-circle-right" style="color:grey; font-size: 35px"></i>
-=======
-            <i [routerLink]="['/map', event.id]" class=" fa fa-chevron-circle-right" style="color:grey; font-size: 35px"></i>
-
-            <!-- (click)="getSupplyLocations(event.id)"
-              [routerLink]="['/event-detail', event.id]"
-              <app-event-item (click)="getEventItem(event.id)" [event]
-     ="event"></app-event-item> -->
->>>>>>> 85714a646a8c4519032f31ba1c8726eb8d71bfb7
           </div>
         </div>
         <div class=" text-muted small text-md-left"> Reported on: {{event.date}} {{event.time}}</div>

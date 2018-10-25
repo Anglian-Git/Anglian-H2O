@@ -5,6 +5,8 @@ import { MouseEvent } from "@agm/core";
 import { ActivatedRoute } from "@angular/router";
 import { EventService } from "src/app/event.service";
 
+import {FormControl} from '@angular/forms';
+
 @Component({
   selector: "app-map",
   templateUrl: "./map.component.html",
@@ -31,29 +33,6 @@ export class MapComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       this.id = +params["id"];
       this.event = this.eventService.getEvent(this.id);
-      //this.SupplyLocation = this.eventService.getSupplyLocations(this.id);
     });
   }
-
-  openNav() {
-    return (document.getElementById("mySidenav").style.width = "250px");
-  }
-
-  closeNav() {
-    return (document.getElementById("mySidenav").style.width = "0");
-  }
 }
-
-/*
-private Map: Map[];
-  private MapUrl = 'api/Map';
-
-  constructor(private http: HttpClient) {}
-
-  ngOnInit() {
-    this.getMap().subscribe(data => (this.Map = data));
-  }
-
-  getMap(): Observable<Map[]> {
-    return this.http.get<Map[]>(this.MapUrl);
-  }*/

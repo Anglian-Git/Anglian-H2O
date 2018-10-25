@@ -1,24 +1,17 @@
 <agm-map [latitude]="event.lat" [longitude]="event.lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false"
   (mapClick)="mapClicked($event)">
 
-
   <agm-marker *ngFor="let location of event.SupplyLocations; let i = index" [latitude]="location.lat" [longitude]="location.lng"
     [label]="location.label">
 
     <agm-info-window>
-      <strong>InfoWindow content</strong>
+      <strong>{{location.street}}</strong>
     </agm-info-window>
 
   </agm-marker>
 
-<<<<<<< HEAD
-  <agm-circle [latitude]="event.lat" [longitude]="event.lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true"
-    [editable]="true">
+  <agm-circle class="position-absolute" [latitude]="event.lat" [longitude]="event.lng" [radius]="5000" [fillColor]="'red'"
+    [circleDraggable]="true" [editable]="true">
   </agm-circle>
-=======
-  <!-- <agm-circle [latitude]="event.lat" [longitude]="event.lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true"
-    [editable]="true">
-  </agm-circle> -->
->>>>>>> 85714a646a8c4519032f31ba1c8726eb8d71bfb7
 
 </agm-map>
