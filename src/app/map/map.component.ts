@@ -5,6 +5,8 @@ import { MouseEvent } from "@agm/core";
 import { ActivatedRoute } from "@angular/router";
 import { EventService } from "src/app/event.service";
 
+import {FormControl} from '@angular/forms';
+
 @Component({
   selector: "app-map",
   templateUrl: "./map.component.html",
@@ -12,7 +14,7 @@ import { EventService } from "src/app/event.service";
 })
 export class MapComponent implements OnInit {
   id: any;
-  zoom = 10;
+  zoom = 13;
   sub: any;
   event: any;
 
@@ -27,42 +29,10 @@ export class MapComponent implements OnInit {
     console.log(`clicked the marker: ${label || index}`);
   }
 
-  markerDragEnd(m: marker, $event: MouseEvent) {
-    console.log("dragEnd", m, $event);
-  }
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.id = +params["id"];
       this.event = this.eventService.getEvent(this.id);
-      //this.SupplyLocation = this.eventService.getSupplyLocations(this.id);
     });
   }
-
-  openNav() {
-    return (document.getElementById("mySidenav").style.width = "250px");
-  }
-
-  closeNav() {
-    return (document.getElementById("mySidenav").style.width = "0");
-  }
 }
-interface marker {
-  lat: number;
-  lng: number;
-  label?: string;
-  draggable: boolean;
-}
-
-/*
-private Map: Map[];
-  private MapUrl = 'api/Map';
-
-  constructor(private http: HttpClient) {}
-
-  ngOnInit() {
-    this.getMap().subscribe(data => (this.Map = data));
-  }
-
-  getMap(): Observable<Map[]> {
-    return this.http.get<Map[]>(this.MapUrl);
-  }*/

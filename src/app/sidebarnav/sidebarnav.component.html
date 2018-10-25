@@ -1,0 +1,25 @@
+<ng-sidebar-container style="height: 600px; ">
+
+  <div ng-sidebar-content>
+    <button><i (click)="_toggleSidebar()" class="fa fa-bars"></i></button>
+  </div>
+
+  <ng-sidebar [(opened)]="_opened" position="left">
+    <div class=" container p-0">
+      <div class=" d-flex flex-row p-3">
+        <div class="flex-column col-9  font-weight-bold">
+          <h6>Supply Locations</h6>
+        </div>
+        <div class="flex-column col-1 ">
+          <i (click)="_toggleSidebar()" class="fa fa-window-close " style="font-size:38px;"></i></div>
+      </div>
+      <div class=" a" *ngFor="let location of event.SupplyLocations">
+        <div class="flex-row p-3  border-bottom border-top  small">
+          {{location.plot_no}} {{location.street}} {{location.City}} {{location.Country}} {{location.Pin_code}}
+          <!-- <span ng-right-click></span> -->
+        </div>
+      </div>
+    </div>
+  </ng-sidebar>
+
+</ng-sidebar-container>

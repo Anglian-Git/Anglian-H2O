@@ -5,7 +5,6 @@ import { Injectable } from "@angular/core";
 })
 export class EventService {
   router: any;
-  //MapUrl = "/api/map";
   constructor() {}
 
   getEvents() {
@@ -27,6 +26,7 @@ const EVENTS = [
     name: "Supply to Mumbai Airoli Street",
     date: "13/08/2018",
     time: "10:00",
+    nav: "Supply to Mumbai Airoli Street",
     SupplyLocations: [
       {
         id: 20000001,
@@ -43,10 +43,10 @@ const EVENTS = [
       {
         id: 20000001,
         locationid: 102,
-        lat: 19.1441,
-        lng: 72.9927053,
+        lat: 19.1584699,
+        lng: 72.9938019,
         plot_no: 202,
-        street: "Sector8, Airoli",
+        street: "CIDCO Colony, Sector3",
         City: "Navi Mumbai",
         Country: "India",
         Pin_code: "400708"
@@ -71,7 +71,7 @@ const EVENTS = [
     name: "Supply to Bangalore Whitefield ",
     date: "05/09/2018",
     time: "08:00",
-    SupplyLocation: [
+    SupplyLocations: [
       {
         id: 20000002,
         locationid: 201,

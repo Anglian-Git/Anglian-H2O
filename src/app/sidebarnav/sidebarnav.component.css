@@ -1,0 +1,24 @@
+i:hover {
+  background-color: #ddd;
+}
+.a {
+  background: white;
+}
+.ng-sidebar {
+  background: white;
+  width: 50px;
+}
+.ng-sidebar-content{
+  
+}
+.container {
+  height: 100%;
+  background: white;
+  max-width: 340px;
+}
+.fa-window-close {
+  color: #007bff;
+}
+.pull-right {
+  float: right;
+}
